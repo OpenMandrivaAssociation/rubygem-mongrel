@@ -50,7 +50,7 @@ rm -rf %{buildroot}%{geminstdir}/ext
 rm -rf %{buildroot}/%{geminstdir}/.require_paths
 mkdir -p %{buildroot}/%{_bindir}
 
-# %{geminstdir}/bin/mongrel_rails does not have a shebang, but it doesn't have to (it's loaded by %{_bindir}/mongrel_rails
+# % {geminstdir}/bin/mongrel_rails does not have a shebang, but it doesn't have to (it's loaded by % {_bindir}/mongrel_rails
 chmod a-x %{buildroot}/%{geminstdir}/bin/mongrel_rails
 mv %{buildroot}/%{gemdir}/bin/mongrel_rails %{buildroot}/%{_bindir}/mongrel_rails
 rm -rf %{buildroot}/%{gemdir}/bin
