@@ -25,6 +25,7 @@ Requires: rubygem(daemons) >= 1.0.3
 Requires: rubygem(fastthread) >= 0.6.2
 Requires: rubygem(gem_plugin) >= 0.2.2
 BuildRequires: rubygems
+BuildRequires: ruby-rdoc
 Provides: rubygem(%{gemname}) = %{version}
 
 %description
