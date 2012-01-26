@@ -18,14 +18,12 @@ License: (GPLv2+ or Ruby) and AFL
 URL: http://mongrel.rubyforge.org
 Source0: http://gems.rubyforge.org/gems/%{gemname}-%{version}.gem
 Source1: http://gems.rubyforge.org/gems/cgi_multipart_eof_fix-%{cmef_version}.gem
-BuildRoot: %{_tmppath}/%{name}-%{version}-root-%(%{__id_u} -n)
 Requires: rubygems
 BuildRequires: ruby-devel
 Requires: rubygem(daemons) >= 1.0.3
 Requires: rubygem(fastthread) >= 0.6.2
 Requires: rubygem(gem_plugin) >= 0.2.2
 BuildRequires: rubygems
-BuildRequires: ruby-rdoc
 Provides: rubygem(%{gemname}) = %{version}
 
 %description
@@ -37,7 +35,6 @@ apps.
 %build
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{gemdir}
 gem install --local --install-dir %{buildroot}%{gemdir} \
             --force --rdoc %{SOURCE0}
@@ -62,11 +59,7 @@ chmod a+x %{buildroot}%{geminstdir}/examples/camping/blog.rb
 chmod a+x %{buildroot}%{geminstdir}/examples/camping/tepee.rb
 chmod a+x %{buildroot}%{gemdir}/gems/cgi_multipart_eof_fix-%{cmef_version}/test/*.rb
 
-%clean
-%{__rm} -rf %{buildroot}
-
 %files
-%defattr(-, root, root)
 %{_bindir}/mongrel_rails
 %{ruby_sitearch}/http11.so
 %dir %{geminstdir}
