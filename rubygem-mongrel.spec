@@ -10,7 +10,7 @@ Summary: A small fast HTTP library and server for Ruby apps
 Name: rubygem-%{gemname}
 
 Version: 1.1.5
-Release: %mkrel 1
+Release:	2
 Group: Development/Ruby 
 # The entire source code is (GPLv2+ or Ruby) except for the code in
 # cgi_multipart_eof_fix-2.5.0.gem  which is AFL
