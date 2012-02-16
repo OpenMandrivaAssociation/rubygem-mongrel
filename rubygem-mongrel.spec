@@ -11,6 +11,7 @@ License:	GPLv2+ or Ruby
 URL:		http://mongrel.rubyforge.org
 Source0:	http://rubygems.org/gems/%{rbname}-%{version}.gem
 Patch0:		mongrel-1.1.5-ruby1.9.patch
+Patch1:		mongrel-1.1.5-add-licenses-tag.patch
 Requires:	rubygem(cgi_multipart_eof_fix)
 BuildRequires:	rubygems 
 BuildRequires:	ruby-devel
@@ -31,6 +32,9 @@ Documents, RDoc & RI documentation for %{name}.
 %prep
 %setup -q
 %patch0 -p1 -b .ruby19~
+gunzip metadata.gz
+%patch1 -p1 -b .licenses~
+gzip metadata
 
 %build
 %gem_build -f '(examples|test|tools)'
