@@ -67,3 +67,25 @@ gzip metadata
 %{ruby_gemdir}/gems/%{rbname}-%{version}/examples/*
 %dir %{ruby_gemdir}/gems/%{rbname}-%{version}/test
 %{ruby_gemdir}/gems/%{rbname}-%{version}/test/*
+
+
+%changelog
+* Thu Feb 16 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.1.5-2
++ Revision: 774700
+- add missing licenses tag to metadata (P1)
+- fix build with ruby 1.9 (P0)
+- regenerate spec with gem2rpm5
+- split out cgi_multipart_eof_fix
+- mass rebuild of ruby packages against ruby 1.9.1
+
+  + Alexander Khrukin <akhrukin@mandriva.org>
+    - removed rdoc
+
+* Thu Sep 08 2011 Andrey Smirnov <asmirnov@mandriva.org> 1.1.5-1
++ Revision: 699020
+- missing rdoc fix
+- rpmlint warning
+
+  + Alexander Barakin <abarakin@mandriva.org>
+    - imported package rubygem-mongrel
+
