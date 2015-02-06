@@ -5,7 +5,7 @@ Summary:	A small fast HTTP library and server for Ruby apps
 Name:		rubygem-%{rbname}
 
 Version:	1.1.5
-Release:	2
+Release:	3
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
 URL:		http://mongrel.rubyforge.org
