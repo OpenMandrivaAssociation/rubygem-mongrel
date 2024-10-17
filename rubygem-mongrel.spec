@@ -8,7 +8,7 @@ Version:	1.1.5
 Release:	3
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
-URL:		http://mongrel.rubyforge.org
+URL:		https://mongrel.rubyforge.org
 Source0:	http://rubygems.org/gems/%{rbname}-%{version}.gem
 Patch0:		mongrel-1.1.5-ruby1.9.patch
 Patch1:		mongrel-1.1.5-add-licenses-tag.patch
